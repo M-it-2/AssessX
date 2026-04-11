@@ -57,32 +57,26 @@ jobs:
           name: windows-exe
           path: AssessX/*.exe
 
-  build-macos:
-    runs-on: macos-latest
+ build-macos:
+  runs-on: macos-latest
 
-    steps:
-      - uses: actions/checkout@v4
+  steps:
+    - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 21
+    - uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: 21
 
-      - name: Build jlink (macOS)
-        run: mvn clean javafx:jlink
-        working-directory: AssessX
+    - name: Build project
+      run: mvn clean package
+      working-directory: AssessX
 
-      - name: Build macOS app
-        run: |
-          jpackage \
-            --name AssessX \
-            --input AssessX/target \
-            --main-jar AssessX-1.0-SNAPSHOT.jar \
-            --main-class com.assessx.assessx.MainApplication \
-            --type app-image
-
-      - name: Upload macOS build
-        uses: actions/upload-artifact@v4
-        with:
-          name: macos-app
-          path: AssessX/target/*.app
+    - name: Build macOS app
+      run: |
+        jpackage \
+          --name AssessX \
+          --input AssessX/target \
+          --main-jar AssessX-1.0-SNAPSHOT.jar \
+          --main-class com.assessx.assessx.MainApplication \
+          --type app-image
