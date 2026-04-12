@@ -56,7 +56,7 @@ public class TakePracticeController {
                     int tests = practice.get("unitTestCount").getAsInt();
 
                     descLabel.setText(practice.get("description").getAsString()
-                            + "\n\n⚡ " + pts + " балів · ⏱ " + timeLeft / 60 + " хв · 🔬 " + tests + " unit-тестів");
+                            + "\n\n⚡ " + pts + " балів ·  " + timeLeft / 60 + " хв · 🔬 " + tests + " unit-тестів");
 
                     codeEditor.setText(
                             "public class Solution {\n" +
