@@ -62,14 +62,8 @@
 ### Сторінка завдань (студент)
 ![Assignments Page](assets/screens/assignments.png)
 
-### Проходження тесту
-![Take Test](assets/screens/take_test.png)
-
 ### Практичне завдання з кодом
 ![Code Practice](assets/screens/code_practice.png)
-
-### Сторінка результатів
-![Results Page](assets/screens/results.png)
 
 ### Панель викладача — тести
 ![Teacher Tests](assets/screens/teacher_tests.png)
