@@ -2,8 +2,6 @@ module com.assessx.assessx {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-    requires org.controlsfx.controls;
-    requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires com.google.gson;
     requires java.net.http;
@@ -20,5 +18,4 @@ module com.assessx.assessx {
     exports com.assessx.assessx;
     exports com.assessx.assessx.api;
     exports com.assessx.assessx.session;
-    exports com.assessx.assessx.ui;
 }
